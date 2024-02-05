@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #game-board {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game-board" width="400" height="800"></canvas>
+  <script>
+    // Obtendo o canvas e seu contexto de desenho
+    const canvas = document.getElementById("game-board");
+    const ctx = canvas.getContext("2d");
+
+    // Definindo as dimensões da área de jogo
+    const gameWidth = canvas.width;
+    const gameHeight = canvas.height;
+
+    // Definindo as cores disponíveis para as peças
+    const colors = ["red", "blue", "green", "yellow", "purple"];
+
+    // Definindo a dimensão de cada quadrado na peça
+    const squareSize = 20;
+
+    // Criando a peça atual
+    let currentPiece = {
+      x: gameWidth / 2,
+      y: 0,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      squares: [
+        [0, 0],
+        [0, squareSize],
+        [squareSize, 0],
+        [squareSize, squareSize]
+      ]
+    };
+
+    // Função para desenhar uma peça no canvas
+    function drawPiece(piece) {
+      ctx.fillStyle = piece.color;
+      piece.squares.forEach(square => {
+        ctx.fillRect(piece.x + square[0], piece.y + square[1], squareSize, squareSize);
+      });
+    }
+
+    // Função para mover a peça atual para baixo
+    function movePieceDown() {
+      currentPiece.y += squareSize;
+      drawPiece(currentPiece);
+    }
+
+    // Chama a função movePieceDown a cada segundo
+    setInterval(movePieceDown, 1000);
+
+    // Desenha a peça inicial
+    drawPiece(currentPiece);
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
+    <script>
+      // Variáveis para armazenar as dimensões da tela e a posição inicial do personagem
+      const screenWidth = 500;
+      const screenHeight = 500;
+      let characterX = screenWidth / 2;
+      let characterY = screenHeight - 50;
+
+      // Variáveis para armazenar o tamanho e a cor do personagem
+      const characterWidth = 50;
+      const characterHeight = 50;
+      const characterColor = "blue";
+
+      // Variáveis para armazenar o tamanho e a cor dos inimigos
+      const enemyWidth = 50;
+      const enemyHeight = 50;
+      const enemyColor = "red";
+
+      // Variáveis para armazenar a pontuação e a vida do personagem
+      let score = 0;
+      let health = 100;
+
+      // Obter o canvas do jogo e seu contexto de desenho
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Função para desenhar o personagem
+      function drawCharacter() {
+        ctx.fillStyle = characterColor;
+        ctx.fillRect(characterX, characterY, characterWidth, characterHeight);
+      }
+
+      // Função para desenhar um inimigo
+      function drawEnemy(enemyX, enemyY) {
+        ctx.fillStyle = enemyColor;
+        ctx.fillRect(enemyX, enemyY, enemyWidth, enemyHeight);
+      }
+
+      // Função para verificar colisões entre o personagem e um inimigo
+      function checkCollision(characterX, characterY, enemyX, enemyY) {
+        return (
+          characterX < enemyX + enemyWidth &&
+          characterX + characterWidth > enemyX &&
+          characterY < enemyY + enemyHeight &&
+          characterY + characterHeight > enemyY
+        );
+      }
+
+      // Função de atualização do jogo, chamada a cada frame
+      function update() {
+        // Limpar a tela
+        ctx.clearRect(0, 0, screenWidth, screenHeight);
+
+        // Desenhar o personagem
+        drawCharacter();
+
+        // Desenhar um inimigo aleatório na tela
+        const enemyX = Math.random() * screenWidth;
+        const enemyY = Math.random() * screenHeight;
+        drawEnemy(enemyX, enemyY);
+
+        // Verificar colisão entre o personagem e o inimigo
+        if (checkCollision(characterX, characterY, enemyX
