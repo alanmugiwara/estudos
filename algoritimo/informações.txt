@@ -1,0 +1,179 @@
+============
+ALGORITIMO
+============
+
+Sequência de passos com instruções para resolver um problema
+
+EXEMPLO = Descobrir qual valor da hora de uma pessoa que recebe um salário de 2.500,00 por mês
+Passo 1 - Definir o valor total do salário
+PASSO 2 - Definir o valor total de horas trabalhadas
+Passo 3 - Dividir o valor total do salário pela quantidade total de horas trabalhadas
+
+=====================
+5 PASSOS NECESSÁRIOS
+=====================
+
+1. Quais os dados de entrada?
+2. O que fazer com os dados
+3. Quais as restrições do problema?
+4. Qual o resultado esperado?
+5. Qual a sequência de passos para chegar ao resultado? (Analisar o problema, tentar explicar em voz alta e escrever cada parte em isntruções)
+
+==========================
+CONCEITOS OBRIGATÓRIOS
+PARA ESCREVER ALGORÍTIMOS
+==========================
+1. Variáveis
+2. Condicionais
+3. Laços de repetição
+4. Coleções
+
+_____________________________________________________________________________________________________________________________________________________
+
+
+=================================================
+RESOLUÇÃO DE PROBLEMAS | LÓGICA DE PROGRAMAÇÃO
+=================================================
+
+================================
+PROBLEMA 1 - FAZER UMA LIGAÇÃO
+================================
+
+1. Quais os dados de entrada? | Telefone + Número do destinatário
+2. O que fazer com os dados | Discar o número do destinatário
+3. Quais as restrições do problema? | Não ser atendido. Nesse caso deixar recado
+4. Qual o resultado esperado? | A ligação ser atentida pelo destinatário
+5. Qual a sequência de passos para chegar ao resultado? | 
+
+PASSO 1 - Pegar um Telefone
+PASSO 2 - Desbloquear a tela do celular caso necessário
+PASSO 3 - Verificar sem tem sinal da operadora
+PASSO 4 - Abrir o discado 
+PASSO 5 - Digitar um número	
+PASSO 6 - Apetar o botão de ligar
+PASSO 7 - Aguardar a ligação iniciar
+PASSO 8 - Se a ligação inciar, conversar com o destinatário [CONDICIONAL 1]
+PASSO 9 - Se não inciar, deixar um recado [CONDICIONAL 2]
+
+
+=====================================
+PROBLEMA 2 - IDENTIFICAR VALOR/HORA
+====================================
+
+1. Quais os dados de entrada? | Valor do salário | Total de horas trabalhadas por mês
+2. O que fazer com os dados | Dividir o valor do salário pelo total de horas trabalahdas por mês
+3. Quais as restrições do problema? | Não devem sem entregue dados além do valor do salário e o total de horas trabalhadas 
+4. Qual o resultado esperado? | Saber o quanto se ganha por hora trabalhada
+5. Qual a sequência de passos para chegar ao resultado? | 
+
+PASSO 1 - Registrar o valor do salário
+PASSO 2 - Registrar o total de horas trabalhadas por mês
+PASSO 3 - Dividir o valor do salário pelo total de horas trabalhadas po mês
+PASSO 4 - Obter o resultado que será o valor em dinheiro revebido por hora trabalhada
+
+
+=======================================
+PROBLEMA 3 - CHUTE DE NÚMERO ALEATÓRIO
+=======================================
+
+Escrever um programa que, ao iniciar gera um valor aleatório de 1 a 10
+e permite que o suário chute um número até que o valor aleatório seja gerado
+ni início do programa seja chutado corretamente.
+
+O programa deve informar se o chute foi acima, abaixo ou igual ao valor aleatório no início do programa.
+
+1. Quais os dados de entrada? | Um valor aleatório e um valor apra o chute do usuário
+2. O que fazer com os dados | Comparar o valor aletório com o chute do usuário alertá-lo caso o valor seja maior, menor ou igual que valor aletório, permitindo-o jogar até acertar.
+3. Quais as restrições do problema? | O programa não deve ser finalizado até o usuário acertar o valor, deve ser gerado um número aleatório a cada vez que o programa iniciar, o usuário deve poder jogar até acertar o valor correto,  exibir alertas caso o número chutado seja maior ou menor. 
+4. Qual o resultado esperado? | O jogo seja finalizado assim que o programa identificar que o chute do usuário seja o mesmo que o número aleatório, exibindo uma parabenização por isso.
+5. Qual a sequência de passos para chegar ao resultado? | 
+
+PASSO 1 - Gerar um numero aleatório de 1 a 10
+PASSO 2 - Armazenar o total de chutes do usuário
+PASSO 3 - Solicitar um chute do usuário entre o valor mínimo e um máximo
+PASSO 4 - Comparar o valor aletório com o valor chutado pelo usuário
+PASSO 5 - Alertar ao usuário caso o número seja menor [CONDICIONAL 1] 
+PASSO 5 - Alertar ao usuário caso o número seja maior [CONDICIONAL 2]
+PASSO 6 - Permitir que o usuário continue jogando até acertar
+PASSO 7 - Alertar ao usuário caso o número esteja correto e exibir o total de tentativas até o acerto e finalizar o jogo inician-o novamente. [CONDICIONAL 3]
+
+_____________________________________________________________________________________________________________________________________________________
+
+========================================
+RESOLUÇÃO DE PROBLEMAS | PSEUDO CÓDIGO
+========================================
+
+=====================================
+PROBLEMA 2 - IDENTIFICAR VALOR/HORA
+PSEUDO CÓDIGO
+====================================
+
+1. Quais os dados de entrada? | Valor do salário | Total de horas trabalhadas por mês
+2. O que fazer com os dados | Dividir o valor do salário pelo total de horas trabalahdas por mês
+3. Quais as restrições do problema? | Não devem sem entregue dados além do valor do salário e o total de horas trabalhadas 
+4. Qual o resultado esperado? | Saber o quanto se ganha por hora trabalhada
+5. Qual a sequência de passos para chegar ao resultado? | 
+
+PASSO 1 - input salario_mensal
+PASSO 2 - input horas_trabalhadas_por_mes
+PASSO 3 - valor-hora = salario_mensal  / horas_trabalhadas_por_mes
+PASSO 4 - print valor-hora
+
+
+MINHA RESPOSTA 
+PASSO 1 - Armazenar o valor do salário em uma varável através de um input para o usuário
+PASSO 2 - Armazenar o valor de horas trabalhadas em uma varável através de um input para o usuário
+PASSO 3 - Uma variável que executa uma operação de divisão entre a variável e a variável do total de horas trabalhadas por mês
+PASSO 4 - Printar na tela o resultado da operação da variável do passo 3
+
+======================================
+PROBLEMA 2.1 - GERADOR DE BOAS VINDAS
+PSEUDO CÓDIGO
+======================================
+
+1. Quais os dados de entrada? = Nome do usuário
+2. O que fazer com os dados? = Concatenar o nome do usuário +  a mensagem de boas vindas
+3. Quais as restrições do problema = É necessário que o usuário insira um nome
+4. Qual o resultado esperado? = nome digitado pelo usuário + mensagem de boas vindas
+5. Qual a sequência de passos para chegar ao resultado?
+
+PASSO 1 - var1 = input nome_do_usuário_
+PASSO 2 - var2 = boas-vindas
+PASSO 4 - print nome_do_usuário + boas-vindas
+
+
+============================================
+PROBLEMA 3 - EXIBIR O MAIOR DE DOIS NÚMEROS
+PSEUDO CÓDIGO
+============================================
+
+1. Quais os dados de entrada? = 2 valores
+2. O que fazer com os dados? = Concatenar o nome do usuário +  a mensagem de boas vindas
+3. Quais as restrições do problema = É necessário ter 2 valores
+4. Qual o resultado esperado? = exibir o maior valor entre os 2 núemros
+5. Qual a sequência de passos para chegar ao resultado?
+PASSO 1 - var1 = input primeiro_valor
+PASSO 2 - if primeiro_valor > segundo valor
+PASSO 4 - print "o primeiro valor é maior"
+PASSO 5 - else print "o segundo valor é maior"
+
+
+===================================================================
+PROBLEMA 4 - PROGRAMA QUE RECEBE UM NÚMERO E IMPRIME SEU FATORIAL
+PSEUDO CÓDIGO
+===================================================================
+
+1. Quais os dados de entrada? = 
+2. O que fazer com os dados? = 
+3. Quais as restrições do problema = 
+4. Qual o resultado esperado? = 
+5. Qual a sequência de passos para chegar ao resultado?
+PASSO 1 - var1 = 
+PASSO 2 -
+PASSO 4 - 
+PASSO 5 - 
+
+
+
+
+ 

@@ -1,0 +1,16 @@
+Abra o Visual Studio Code.
+
+No menu, vá para "File" (Arquivo) > "Preferences" (Preferências) > "Settings" (Configurações).
+
+No lado direito, clique no ícone de engrenagem e selecione "Settings" (Configurações) ou pressione Ctrl + , para abrir diretamente as configurações.
+
+Na barra de pesquisa, digite "Integrated" e selecione "Edit in settings.json" (Editar em settings.json) nas configurações do terminal integrado.
+
+Adicione a seguinte linha ao arquivo settings.json:
+
+"terminal.integrated.profiles.windows": {
+    "PowerShell": {
+        "source": "PowerShell",
+        "args": ["-NoLogo", "-NoProfile"]
+    }
+},

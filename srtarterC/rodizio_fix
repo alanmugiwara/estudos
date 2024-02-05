@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int rodizio;
+    printf("Entre com um número inteiro de 0 a 9: ");
+    scanf("%d", &rodizio);
+    
+    if (rodizio >= 0 && rodizio <= 9) {
+        printf("O carro com placa terminada em %d não circula nos seguintes dias:\n", rodizio);
+        switch (rodizio) {
+            case 0:
+            case 1:
+                printf("Segundas-feiras.\n");
+                break;
+            case 2:
+            case 3:
+                printf("Terças-feiras.\n");
+                break;
+            case 4:
+            case 5:
+                printf("Quartas-feiras.\n");
+                break;
+            case 6:
+            case 7:
+                printf("Quintas-feiras.\n");
+                break;
+            case 8:
+            case 9:
+                printf("Sextas-feiras.\n");
+                break;
+        }
+    } else {
+        printf("Este número não corresponde a uma placa válida.\n");
+    }
+
+    getchar(); // Aguarde uma entrada de teclado para encerrar o programa
+    return 0;  // Retorna 0 para indicar que o programa foi executado com sucesso
+}

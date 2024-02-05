@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int rodizio;
+    printf("Entre com um número inteiro de 0 a 6: ");
+    scanf("%d", &rodizio);
+    
+    switch (rodizio) {
+        case 0:
+            printf("Domingo\nPlacas 0");
+            break;
+        case 1:
+            printf("Segunda-feira\nPlacas 1 e 2");
+            break;
+        case 2:
+            printf("Terça-feira\nPlacas 3 e 4");
+            break;
+        case 3:
+            printf("Quarta-feira\nPlacas 4 e 5");
+            break;
+        case 4:
+            printf("Quinta-feira\nPlacas 6 e 7");
+            break;
+        case 5:
+            printf("Sexta-feira\nPlacas 8 e 9");
+            break;
+        default:
+            printf("Este número não corresponde ao número solicitado");
+    }
+    
+    getchar(); // Aguarde uma entrada de teclado para encerrar o programa
+    return 0;  // Retorna 0 para indicar que o programa foi executado com sucesso
+}
