@@ -25,5 +25,3 @@ def tab(apertos):
     pag.press('tab', apertos, 0.2)
     tab(3)
 pag.press('enter')
-
-# print(pag.position())
